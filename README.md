@@ -46,3 +46,30 @@
 + Lo exporta en la "direccion_csv"
 + Arma un .csv grupal con todas las jugadoras para el análisis de equipo.
 + Lo exporta en la direccion_equipo
+
+
+## Fpdf.ipynb
+  
+> [!WARNING]
+> **FUNCION 1** INCOMPLETO
+> Obtener el nombre del archivo de "direccion_celda_final"
+> ### def armar_pdf(nombre,protocolo,direccion_celda_final,direccion_pdf)
+
+> [!TIP]
+> Utilizar direcciones de archivos en los discos compartidos de drive para evitar problemas de path
+
+***ej:** armar_pdf ("Garcia Piccinini Osvaldo","Fuerza isométrica con Celda de cargas en MMII", "path_csv_jugador_terminado","path_final del pdf)*
+
+**VARIABLES**
+1. nombre = nombre del deportista
+2. protocolo = nombre del protocolo
+3. direccion_celda_final = "path del archivo donde se guardaron todos los datos procesados del jugador"
+4. direccion_pdf = "path de la carpeta para guardar el pdf armardo"
+
+**ACCIONES**
++ Recibe el nombre del club y el protocolo para el pdf
++ Recibe la dirección del archivo final procesado del jugador para obtener todos los datos necesarios para poner en el informe
++ Arma el informe del jugador en formato pdf
++ Exporta el archivo .pdf en la direccion_pdf
+
+
