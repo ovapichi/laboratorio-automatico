@@ -18,9 +18,29 @@
 1. direccion = path de la carpeta que quiero obtener la lista
 
 **ACCIONES**
+
 + Recibe una dirección (Path)
 + Revisa cada archivo de la dirección
 + Devuelve una lista de todos los archivos/carpetas que estan dentro de esa dirección, sin entrar en ninguna carpeta interna
+
+**FUNCION 2**
+
+### def lista_direcciones(lista,direccion)
+
+> [!TIP]
+> Utilizar la lista obtenida en la función **leer_carpeta**
+
+***ej:** lista_de_direcciones = lista_direcciones (lista_de_archivos_de_leer_carpeta, path)*
+
+**VARIABLES**
+1. lista = lista de archivos obtenida en funcion leer lista
+2. direccion = path de la carpeta que quiero obtener la lista
+
+**ACCIONES**
++ Recibe una dirección (Path)
++ Recibe una lista de archivos
++ Hace la unión de la lista con la direccion, para poder iterar esta lista de direcciones directamente.
++ Devuelve una lista con las direcciones de cada archivo de la lista ingresada.
 
 ## Win Laborat.ipynb
 
