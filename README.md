@@ -14,15 +14,6 @@
 
 ***ej:** lista = leer_carpeta (direccion)*
 
-**VARIABLES**
-1. direccion = path de la carpeta que quiero obtener la lista
-
-**ACCIONES**
-
-+ Recibe una dirección (Path)
-+ Revisa cada archivo de la dirección
-+ Devuelve una lista de todos los archivos/carpetas que estan dentro de esa dirección, sin entrar en ninguna carpeta interna
-
 **FUNCION 2**
 
 ### def lista_direcciones(lista,direccion)
@@ -31,16 +22,6 @@
 > Utilizar la lista obtenida en la función **leer_carpeta**
 
 ***ej:** lista_de_direcciones = lista_direcciones (lista_de_archivos_de_leer_carpeta, path)*
-
-**VARIABLES**
-1. lista = lista de archivos obtenida en funcion leer lista
-2. direccion = path de la carpeta que quiero obtener la lista
-
-**ACCIONES**
-+ Recibe una dirección (Path)
-+ Recibe una lista de archivos
-+ Hace la unión de la lista con la direccion, para poder iterar esta lista de direcciones directamente.
-+ Devuelve una lista con las direcciones de cada archivo de la lista ingresada.
 
 ## Win Laborat.ipynb
 
@@ -52,44 +33,47 @@
 ### def celda_dat_csv(lista,direccion_dat,direccion_csv,direccion_equipo)
 ***ej:** celda_dat_csv(lista,direccion_dat,direccion_csv,direccion_equipo)*
 
-**VARIABLES**
-1. lista = la lista de archivos .dat
-1. direccion_dat = path de los archivos .dat
-1. direccion_csv = path de guardado de los .csv individuales
-1. direccion_equipo = path de guardado del .csv de equipo
-
-**ACCIONES**
-+ Recibe una lista de archivos .dat exportados de Win Laborat 
-+ Recibe la dirección de la carpeta de los archivos .dat Win Laborat Celda de Cargas
-+ Recibe la dirección de la carpeta donde grabará los .csv individuales de cada deportista con sus 4 pruebas
 + Arma un .csv con los máximos de las 4 pruebas de fuerza isométrica de Celda de Cargas para muslos, independientemente del tiempo de duración de la prueba y la cantidad de repeticiones de la toma.
 + Lo exporta en la "direccion_csv"
 + Arma un .csv grupal con todas las jugadoras para el análisis de equipo.
-+ Lo exporta en la direccion_equipo
-
 
 ## Fpdf.ipynb
   
-> [!WARNING]
-> **FUNCION 1** INCOMPLETO
-> Obtener el nombre del archivo de "direccion_celda_final"
-> ### def armar_pdf(nombre,protocolo,direccion_celda_final,direccion_pdf)
+**FUNCION 1** 
+Obtener el nombre del archivo de "direccion_celda_final"
+### def armar_pdf(nombre,protocolo,direccion_celda_final,direccion_pdf)
 
 > [!TIP]
 > Utilizar direcciones de archivos en los discos compartidos de drive para evitar problemas de path
 
 ***ej:** armar_pdf ("Garcia Piccinini Osvaldo","Fuerza isométrica con Celda de cargas en MMII", "path_csv_jugador_terminado","path_final del pdf)*
 
-**VARIABLES**
-1. nombre = nombre del deportista
-2. protocolo = nombre del protocolo
-3. direccion_celda_final = "path del archivo donde se guardaron todos los datos procesados del jugador"
-4. direccion_pdf = "path de la carpeta para guardar el pdf armardo"
 
-**ACCIONES**
-+ Recibe el nombre del club y el protocolo para el pdf
-+ Recibe la dirección del archivo final procesado del jugador para obtener todos los datos necesarios para poner en el informe
-+ Arma el informe del jugador en formato pdf
-+ Exporta el archivo .pdf en la direccion_pdf
+## Análisis_Celda_de_Carga.ipynb
+  
+**CLASE CELDA** 
+Celda(4 valores máximos en el orden: CD,CI,ID,II)
+Celda.ejecutar():
 
+def ejecutar_historico_celda(self,jugadora,fecha,datos):
+self= No se usa
+jugadora= nombre de la jugadora
+fecha = lista de fechas de cada evaluacion en formato AA-MM
+datos = CD,CI,ID,II,SD,SI,HQC,HQI
 
+> [!TIP]
+> Utilizar direcciones de archivos en los discos compartidos de drive para evitar problemas de path
+
+## Gráfico_Polar.ipynb
+Arma un gráfico polar con las variables asignadas, se recomienda usar:
+
+def grafico_polar(nombre_jugadora,tipo,etiquetas,variables,largo,fecha_test,color_list):
+
+color_list= una lista con el formato de cada item      color = float((fecha.year-2020) + fecha.month/12 )
+
+## Ejecutar_celda.ipynb
+## Ejecutar_fotocelula.ipynb
+Arman el informe del último corte de evaluación poniendole la direccion correcta
+
+## ejecutar_historico_celda_pdf.ipynb
+Arma un infome histórico de cada jugadora de celda de cargas con la función Celda.ejecutar_historico_celda con gráficos polares absolutos y relativos
